@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="css/style.css">
   <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
-<body>
 <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -24,6 +23,22 @@
   };
   firebase.initializeApp(config);
 </script>
+<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-messaging.js"></script>
+
+<!-- Leave out Storage -->
+<!-- <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-storage.js"></script> -->
+
+<script>
+  var config = {
+    // ...
+  };
+  firebase.initializeApp(config);
+</script>
+
+<body>
   <section class="container">
     <div class="login">
       <h1>Login to Web App</h1>
