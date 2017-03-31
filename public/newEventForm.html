@@ -8,7 +8,53 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Create Pop</title>
-
+<style type="text/css">
+		ul {
+			margin:0;
+			padding:0;
+			list-style-type:none;
+			min-width:200px;
+		}
+ 
+		ul#navigation {
+			float:left;
+		}
+ 
+		ul#navigation li {
+			float:left;
+			border:1px black solid;
+			min-width:200px;
+		}
+ 
+		ul.sub_navigation {
+			position:absolute;
+			display:none;
+		}
+ 
+		ul.sub_navigation li {
+			clear:both;
+		}
+ 
+		a,
+		a:active,
+		a:visited {
+			display:block;
+			padding:10px;
+		}
+	</style>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+	        // Wait for the page and all the DOM to be fully loaded
+		$('body').ready(function() {
+ 
+	                // Add the 'hover' event listener to our drop down class
+			$('.dropdown').hover(function() {
+	                        // When the event is triggered, grab the current element 'this' and
+	                        // find it's children '.sub_navigation' and display/hide them
+				$(this).find('.sub_navigation').slideToggle(); 
+			});
+		});
+	</script>
 	<link rel="stylesheet" href="assets/demo.css">
 	<link rel="stylesheet" href="assets/form-register.css">
 
