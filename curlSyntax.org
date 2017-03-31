@@ -1,0 +1,14 @@
+➜  hack git:(master) curl -X PUT -d '{ "first": "Jack", "last": "Sparrow" }' \
+  'https://bgupop.firebaseio.com/users/jack/name.json'
+
+{"first":"Jack","last":"Sparrow"}%                                                                                                                           ➜  hack git:(master) curl -X PUT -d '{ "first": "any", "last": "user" }' \
+  'https://bgupop.firebaseio.com/users/jack/name.json'
+
+{"first":"any","last":"user"}%                                                                                                                               ➜  hack git:(master) curl -X PUT -d '{ "first": "any", "last": "user" }' \
+  'https://bgupop.firebaseio.com/users/22.json'
+
+{"first":"any","last":"user"}%                                                                                                                               ➜  hack git:(master) curl -X PUT -d '{ "first": "kyany", "last": "user" }' \
+  'https://bgupop.firebaseio.com/users/22.json'
+
+{"first":"kyany","last":"user"}%                                                                                                                             ➜  hack git:(master) curl -X PUT -d '{ "first": "tommy", "last": "user" }' \
+  'https://bgupop.firebaseio.com/users/62.json'
