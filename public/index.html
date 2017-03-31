@@ -1,68 +1,80 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>my title</title>
-    <style media="screen">
-      body {
-        font-family: Roboto, Arial, sans-serif;
-        background: #ECEFF1;
-        color: rgba(0,0,0,0.87);
-      }
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+      apiKey: "AIzaSyAwKBedqo1JrS9ghwqGDhWyC5bEPJpNBiY",
+      authDomain: "bgupop.firebaseapp.com",
+      databaseURL: "https://bgupop.firebaseio.com",
+      storageBucket: "bgupop.appspot.com",
+      messagingSenderId: "119733979055"
+      };
+      firebase.initializeApp(config);
+    </script>
 
-      a {
-        color: rgb(3,155,229);
-      }
-
-      #message {
-        max-width: 400px;
-        margin: 40px auto;
-        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.14),0 2px 1px -1px rgba(0,0,0,0.12);
-        border-radius: 2px;
-        background: white;
-        padding: 16px 24px;
-      }
-
-      #message h1 {
-        font-size: 22px;
-        font-weight: 500;
-        text-align: center;
-        margin: 0 0 16px;
-      }
-
-      #message p {
-        font-weight: 300;
-        line-height: 150%;
-      }
-
-      #message ul {
-        list-style: none;
-        margin: 16px 0 0;
-        padding: 0;
-        text-align: center;
-      }
-
-      #message li a {
-        display: inline-block;
-        padding: 8px;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: 500;
-        background: rgb(3,155,229);
-        color: white;
-        border: 1px solid rgb(3,155,229);
-        border-radius: 3px;
-        font-size: 14px;
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
-      }
-    </style>
+    <title>BGU-POP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="events.json"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://bradfrost.github.com/this-is-responsive/styles.css">
+    <link rel="stylesheet" type="text/css" href="POP.css">
+    <script type="text/javascript" src="POP.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
+
   <body>
-    <div id="message">
-      <h1>Welcome</h1>
-      <p>You're seeing this!</p>
-      <ul>
+    <!--Pattern HTML-->
+    <div id="pattern" class="pattern floating-menu">
+      <!--Begin Pattern HTML-->
+      <a href="#menu" class="menu-link">Menu</a>
+      <nav id="menu" role="navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a id="menuBrowseClick" title="Show Events Table" href="#" onclick="showEventsTable();return false;">Browse</a></li>
+          <li><a id="menuCreateEventClick" title="Create Event" href="#" onclick="showCreateEvent();return false;">Create Event</a></li>
+          <li><a id="menuMyProfileClick" title="See Profile" href="#" onclick="showMyProfile();return false;">My Profile</a></li>
+          <li><a id="test" title="See Profile" href="https://bgupop.firebaseio.com/users/jack/name.json">test</a></li>
         </ul>
+      </nav>
     </div>
+    <!--End Pattern HTML-->
+    <div class="container"><!-- container -->
+      <div class="pageContent"><!-- pageContent -->
+        <table class="gridTable">
+          <tr class="gridTableTr">
+            <td class="gridTableTd">
+              <table id="datesTable" class="datesTable" style="width=100%; visibility: hidden;"></table>
+              <div  id="makeEvent" style="width=100%; visibility: hidden;">
+                <form id="makeEvent" name="makeEventForm" enctype="multipart/form-data" method="post">
+                  <fieldset>
+                    <h2></h2>
+                     <input type='file' id='fileinput'>
+                     <input type='button' id='btnLoad' value='Load' onclick='loadFile();'>
+                  </fieldset>
+                </form>
+              </div>
+              <div id="eventPages" style="width=100%"></div>
+            </td>
+          </tr>
+        </table>
+
+
+        <!-- TODO:REMOVE THIS!!! -->
+        <!-- <form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
+          <fieldset>
+            <h2>Json File</h2>
+             <input type='file' id='fileinput'>
+             <input type='button' id='btnLoad' value='Load' onclick='loadFile();'>
+          </fieldset>
+        </form> -->
+
+      </div><!-- pageContent -->
+    </div><!-- container -->
   </body>
 </html>
