@@ -12,3 +12,11 @@
 
 {"first":"kyany","last":"user"}%                                                                                                                             ➜  hack git:(master) curl -X PUT -d '{ "first": "tommy", "last": "user" }' \
   'https://bgupop.firebaseio.com/users/62.json'
+
+
+{"first":"any","last":"user"}%                                                          
+
+curl -X PUT -d '{ "first": "any", "last": "user" }' \'https://bgupop.firebaseio.com/users/22.json'
+
+
+curl 
