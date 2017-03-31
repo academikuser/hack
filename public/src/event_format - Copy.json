@@ -1,0 +1,56 @@
+[
+	{
+		"event_id": "0001",
+		"title": "Ultimate Frisbee",
+		"creator":
+				{
+						"user_id": "0001",
+						"name": "John Doe",
+						"phone": "+972 555 555 555",
+						"email": "jd@post.bgu.ac.il",
+				    "img": ""
+				},
+		"location": "",
+		"time":
+				{
+						"startTime": "16:30",
+						"endTime": "19:30",
+						"date":
+							{
+								"day": "1",
+								"month": "4",
+								"year": "2017"
+							}
+				},
+    "description": "",
+		"category" : "",
+    "img": "",
+},
+{
+	"event_id": "0001",
+	"title": "Ultimate Frisbee",
+	"creator":
+			{
+					"user_id": "0001",
+					"name": "John Doe",
+					"phone": "+972 555 555 555",
+					"email": "jd@post.bgu.ac.il",
+					"img": ""
+			},
+	"location": "",
+	"time":
+			{
+					"startTime": "16:30",
+					"endTime": "19:30",
+					"date":
+						{
+							"day": "1",
+							"month": "4",
+							"year": "2017"
+						}
+			},
+	"description": "",
+	"category" : "",
+	"img": "",
+}
+]
