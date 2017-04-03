@@ -1,11 +1,11 @@
-# hack
+* hackathon project
 
 Swagger api [location](./config/swagger.json)
 
-## version 0.79
+** version 0.81
+made repository private
 
-moved to godaddy host
+** docs:
 
-### docs:
 see file 
 myRestAPIjsonREADME.txt
