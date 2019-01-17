@@ -15,7 +15,7 @@
   "dependencies": {
     "firebase": "^3.7.4",
     "ng-admin": "^1.0.2",
-    "restify": "^3.0.3",
+    "restify": ">=4.1.0",
     "swaggerize-restify": "^2.0.0",
     "swagmock": "~0.0.2"
   },
